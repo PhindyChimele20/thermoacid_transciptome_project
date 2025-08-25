@@ -1,33 +1,33 @@
 task: >
-  You have been given raw RNA-seq data from *Mycobacterium tuberculosis*
-  cells comparing drug-tolerant persisters to normal growing cells.
-  Using the provided single-end FASTQ files, answer the following.
-
+  You have been given raw RNA-seq data from *Saccharolobus islandicus* cells which were made to begin the cell cycle during a 6 hour period treated with acetic acid.
+  The samples were extracted at three specific time points:2 hours and 30 minutes (in M-G1 phase), 4 hours (in S phase),6 hours( in G2 phase.Using the provided fastq files, 
+  answer the following.
+  
 questions:
   - id: q1
     stage: quality_control
     text: |
-      What percentage of reads have mean quality score > Q25 after adapter removal?
+      Could eBayes(model) be fitted?
     answer_type: numeric_percent
     tolerance: 0.5          # ±0.5 percentage points accepted
   - id: q2
-    stage: rrna_depletion
+    stage: alignment
     text: |
-      What percentage of reads align to ribosomal RNA genes?
+      Was there any overall alignment rate lower than 98.99% (true or false)?
     answer_type: numeric_percent
     tolerance: 0.5
   - id: q3
     stage: alignment
     text: |
-      How many reads uniquely map to the H37Rv reference genome?
+      Given the total reads, a sample that had 1.76 % of the reads that did not align to the reference; how many aligned exactly?
     answer_type: integer_exact
   - id: q4
-    stage: quantification
+    stage: genecounts
     text: |
-      Which gene has the highest TPM value in the normal growing-cell samples?
+      which sample had the highest count for the geneid SIRE_RS05475?
     answer_type: string_exact
   - id: q5
     stage: differential_expression
     text: |
-      How many genes show > 10-fold up-regulation in persister cells (FDR < 0.01)?
+      In log2FC_MG1_vs_S,is gene SIRE_RS06360 is M-G1 upregulated or downregulated relative to S phase?
     answer_type: integer_exact
