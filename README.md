@@ -11,11 +11,18 @@ The subsampled and cleaned FASTQs are stored in `data/` and are used as the inpu
 
 ## 2. How to download
 
-INSTRUCTIONS TO ACCESS THE DATA
-### Example using SRA Toolkit
+The samples were obtained by first fetching the sample’s SRA record (SRX) on GEO using geofetch, then downloaded the fastq of the selected samples using their corresponding SRR accession.
+### Code for downloading
 
 ```bash
-CODE TO DOWNLOAD
+geofetch -i GSE296035 --just-metadata
+SRRS=("SRX28623476" "	SRX28623471" "SRX28623484")
+
+for SRR in "${SRRS[@]}"; do
+    echo "Downloading $SRR ..."
+    prefetch "$SRR"
+    fastq-dump --gzip --split-files "$SRR"
+done
 ```
 
 
@@ -37,6 +44,7 @@ CODE TO SUBSAMPLE
 ---
 
 ## 4. How the workflow works
+The workflow files is stored in workflow/ and it is divided into different steps:
 DESCRIBE THE WORKFLOW HERE - NOTE THE BELOW ARE JUST EXAMPLES, REPLACE WITH YOUR OWN - YOURS CAN TAKE A VERY DIFFERENT FORMAT
 The workflow files is stored in `workflow/`.
 
