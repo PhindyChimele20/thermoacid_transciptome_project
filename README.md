@@ -4,7 +4,7 @@
 
 ## 1. Data sources
 
-This task is based on publicly available sequencing data from a study of **\[insert study topic here]**. The dataset includes multiple samples under different conditions (e.g., treated vs. control) and was originally sequenced using **\[insert platform, e.g., Illumina 2×150]**.
+This task is based on on publicly available sequencing data from the study "“Transcriptional landscape of the cell cycle in a model thermoacidophilic archaeon reveals similarities to eukaryotes”which focused on understanding the gene expression of Saccharolobus islandicus relative to its different cell-cycle stages. Cultures of S. islandicus were made to begin the cell cycle at once by a 6-hour treatment with acetic acid. After the removal of the acetic acid, the cells resumed their cell cycle. Total RNA was extracted from 3 samples at three specific time points after synchronization: sample 1 (2 hours and 30 minutes (in M-G1 phase)), sample 2 (4 hours (in S phase)), sample 3 (6 hours( in G2 phase)).The samples were sequenced using an Illumina NextSeq 2000 sequencer.
 The subsampled and cleaned FASTQs are stored in `data/` and are used as the inputs for the workflow.
 
 ---
