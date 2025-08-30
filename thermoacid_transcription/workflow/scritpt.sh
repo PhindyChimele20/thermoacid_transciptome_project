@@ -1,4 +1,4 @@
-wdk="Folder/sample"
+wdk="/data"
 cd "$wdk"
 
 # unzip all the .gz files
