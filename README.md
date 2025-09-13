@@ -30,14 +30,16 @@ done
 
 ## 3. Pre-processing 
 
-From the GEO where the raw data fastq files are, we selected 3 samples and downloaded using their SRR accessions as per above script (Code for Downloaded)
+From the GEO where the raw data fastq files are, we selected 3 samples and downloaded using their SRR accessions as per above script (Code for Downloaded). The fastq files were compressed using zip
 
 1. **STEP 1** ...
 
 Example:
 
 ```bash
-CODE TO SUBSAMPLE
+for file in *.fastq; do
+    zip "${file}.zip" "$file"
+done  
 ```
 
 
