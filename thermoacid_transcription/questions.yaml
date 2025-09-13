@@ -8,8 +8,8 @@ questions:
     stage: limma
     text: |
       Could eBayes(model) be fitted?
-    answer_type: numeric_percent
-    tolerance: 0.5          # ±0.5 percentage points accepted
+    answer_type: yes_or_no
+    tolerance: 0.8          # ±0.8 percentage points accepted
   - id: q2
     stage: alignment
     text: |
@@ -19,8 +19,9 @@ questions:
   - id: q3
     stage: alignment
     text: |
-      Given the total reads, a sample that had 1.76 % of the reads that did not align to the reference; how many aligned exactly?
-    answer_type: integer_exact
+      Given the total reads, one of the samples had 1.76 % of the reads that did not align to the reference; how many aligned exactly?
+    answer_type: integer
+     tolerance: 0.5
   - id: q4
     stage: genecounts
     text: |
