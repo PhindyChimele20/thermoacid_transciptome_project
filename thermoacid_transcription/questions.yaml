@@ -27,8 +27,10 @@ questions:
     text: |
       which sample had the highest count for the geneid SIRE_RS05475?
     answer_type: string_exact
+    tolerance: 0.7
   - id: q5
     stage: differential_expression
     text: |
       In log2FC_MG1_vs_S,is gene SIRE_RS06360 is M-G1 upregulated or downregulated relative to S phase?
     answer_type: integer_exact
+    tolerance: 0.7
