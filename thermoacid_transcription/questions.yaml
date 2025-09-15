@@ -5,23 +5,23 @@ task: >
   
 questions:
   - id: q1
-    stage: limma
+    stage: alignmengt
     text: |
-      Could eBayes(model) be fitted?
-    answer_type: yes_or_no
-    tolerance: 0.8          # ±0.8 percentage points accepted
+      What is the percentage of reads that did not align?
+    answer_type: numeric_percent
+    tolerance: 0.8          
   - id: q2
     stage: alignment
     text: |
-      Was there any overall alignment rate lower than 98.99% (true or false)?
+      What is the overall alignment rate?
     answer_type: numeric_percent
-    tolerance: 0.5
+    tolerance: 0.75
   - id: q3
     stage: alignment
     text: |
       Given the total reads, one of the samples had 1.76 % of the reads that did not align to the reference; how many aligned exactly?
     answer_type: integer
-     tolerance: 0.5
+     tolerance: 0.75
   - id: q4
     stage: genecounts
     text: |
@@ -31,6 +31,6 @@ questions:
   - id: q5
     stage: differential_expression
     text: |
-      In log2FC_MG1_vs_S,is gene SIRE_RS06360 is M-G1 upregulated or downregulated relative to S phase?
+      In log2FC_MG1_vs_S, what is the expression value of gene SIRE_RS06360 in M-G1 relative to S phase?
     answer_type: integer_exact
-    tolerance: 0.7
+    tolerance: 0.85
