@@ -5,7 +5,7 @@ task: >
   
 questions:
   - id: q1
-    stage: alignmengt
+    stage: alignment
     text: |
       What is the percentage of reads that did not align?
     answer_type: numeric_percent
